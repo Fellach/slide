@@ -63,7 +63,9 @@ export class AppComponent implements OnInit {
 
   private swapTwoTiles(tile, x, y, direction) {
     const index = this.tiles.indexOf(tile);
-    tile = tile.set('x', x).set('y', y).set('direction', direction);
+    tile = tile.set('x', x)
+               .set('y', y)
+               .set('direction', direction);
     return this.tiles.set(index, tile);
   }
 

@@ -29,7 +29,7 @@ import { Tile, DIRECTION } from './tile';
 export class TileComponent {
     @Input() tile: Map<{}, Tile>;
     @Output() onMove: EventEmitter<void> = new EventEmitter<void>();
-    readonly factor: number = 5;
+    public readonly factor: number = 5;
 
     move() {
         this.onMove.next();

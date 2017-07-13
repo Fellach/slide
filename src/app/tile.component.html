@@ -1,4 +1,10 @@
-<div [ngStyle]="{'top.em': tile.get('x') * factor, 'left.em': tile.get('y') * factor}" (click)="move()" [@move]="tile.get('direction')">
+<div [ngStyle]="{
+    'top.em': tile.get('x') * factor, 
+    'left.em': tile.get('y') * factor
+    }" 
+    (click)="move()" 
+    [@move]="tile.get('direction')"
+>
     <div>
         {{ tile.get('label') }}
     </div>
