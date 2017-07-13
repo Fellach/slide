@@ -1,0 +1,68 @@
+#board {
+    position: relative;
+    margin: 4em;
+
+    app-tile {
+        > div {
+            position: absolute;
+            cursor: pointer;
+
+            > div {   
+                 padding: 2em;
+                 width: .91em;
+                 height: .91em;
+                 background-color: chocolate;
+                 text-align: center;
+                 color: beige;
+                 border: 1px solid brown;
+                 box-shadow: -2px 1px 10px -1px rgba(80, 20, 20, 0.5);
+
+                 &:hover {
+                     border-color: burlywood;
+                     background-color: lighten(chocolate, 5%)
+                 }
+            }
+        }
+    }
+}
+
+h4 {
+    font-size: 5em;
+    color: crimson;
+    margin: 1.2em .8em;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    display: inline-block;
+    position: absolute;
+}
+
+body {
+    background-color: #6d695c;
+    background-image:
+    repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+    linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+    background-size: 70px 120px;
+}
+
+
+button {
+ display: inline-block;
+ border:1px solid #c9ae34;
+ color: #705D07;
+ border-radius: 3px 3px 3px 3px;
+ width: auto;
+ height: auto;
+ font-size: 16px;
+ padding: 10px 40px;
+ text-shadow: 0 1px 0 brown;
+ background-image: linear-gradient(to top, #fce374, #fcdf5b);
+ background-color: #fce374;
+
+    &:hover {
+    border:1px solid #967d09;
+    color: #705D07;
+    background-color: #fcdf5b;
+    }
+}

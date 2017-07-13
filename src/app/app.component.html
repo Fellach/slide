@@ -1,3 +1,8 @@
-<h1>
-  {{title}}
-</h1>
+<header>
+  <button (click)="onStart()">Start</button>
+  <button (click)="onUndo()" [disabled]="isSolved">Undo ({{ history.size }})</button>
+</header>
+<div id="board">
+  <app-tile *ngFor="let tile of tiles" [tile]="tile" (onMove)="isSolved || onMove(tile)"></app-tile>
+</div>
+<h4 *ngIf="isSolved">Solved!</h4>
